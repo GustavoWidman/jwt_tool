@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jwt-tool"
+version = "2.3.0"
+requires-python = ">=3.6"
+dependencies = ["termcolor", "cprint", "pycryptodomex", "requests", "ratelimit"]
+
+[project.scripts]
+jwt-tool = "entry:run"
+
+[tool.setuptools]
+py-modules = ["entry", "jwt_tool"]
