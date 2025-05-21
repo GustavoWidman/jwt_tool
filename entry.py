@@ -1,4 +1,6 @@
 def run():
 	import runpy
 
-	runpy.run_path("jwt_tool.py", run_name="__main__")
+	from importlib_resources import files
+
+	runpy.run_path(f"{files("jwt_tool").joinpath("jwt_tool.py")}", run_name="__main__")
